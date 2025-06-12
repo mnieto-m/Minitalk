@@ -6,7 +6,7 @@
 #    By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/16 17:51:14 by mnieto-m          #+#    #+#              #
-#    Updated: 2024/12/28 18:32:00 by mnieto-m         ###   ########.fr        #
+#    Updated: 2025/06/12 21:11:01 by mnieto-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm
 RMFLAGS = -rf
 MKDIR = mkdir -p
-INCLUDE = -I${INCLUDE_DIR}
+INCLUDE_CLIENT = cliente.h 
+INCLUDE_SERVER = server.h
 # Directorios
 
 LIBFT_DIR = Libft/
@@ -63,19 +64,15 @@ SRC_DIR = src/
 OBJ_DIR = bin/obj/
 BIN_DIR = bin/
 INCLUDE_DIR = include/
+INCLUDE_DIR_CLIENT =  ${INCLUDE_DIR} ${INCLUDE_CLIENT}
+INCLUDE_DIR_SERVER =  ${INCLUDE_DIR} ${INCLUDE_SERVER}	
 
 #Files
 SERVER_DIR =
 
 
 FILES = main\
-		check_argv\
-		checkfile_fdf\
-		ft_atoi_base\
-		ft_error\
-		init_map\
-		mlx\
-		read_map
+
 
 # FILES_ADD
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
