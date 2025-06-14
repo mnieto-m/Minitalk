@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:25:59 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/06/14 16:31:12 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/06/14 17:33:39 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,13 @@
 } */
 
 
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
-	printf()
+	printf("holaaaaa");
+	if(argv[1] != NULL)
+		printf("holaaa");
+	if(argc != 0)
+		printf("adios");
 	//parse_client(argc, argv);
 
 }
