@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:25:59 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/17 19:48:36 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/06/14 16:32:48 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../INCLUDE/server.h"
+#include "../../include/server.h"
 
 t_global	g_server;
 

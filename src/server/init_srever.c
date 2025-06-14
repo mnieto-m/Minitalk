@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 15:11:23 by mnieto-m          #+#    #+#             */
-/*   Updated: 2024/12/17 15:17:46 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/06/14 16:32:35 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../INCLUDE/server.h"
+#include "../../include/server.h"
 
 void init_server(t_global t_global)
 {
