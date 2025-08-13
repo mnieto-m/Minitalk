@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:03:31 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/06/14 16:48:07 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/13 17:56:48 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ typedef struct s_global
 }	t_global;
 
 extern t_global g_client;
+
+int check_argv(int argc);
 
 
 #endif
