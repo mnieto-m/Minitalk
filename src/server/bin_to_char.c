@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   bin_to_char.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/16 17:25:59 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/15 16:16:36 by mnieto-m         ###   ########.fr       */
+/*   Created: 2025/08/15 16:27:14 by mnieto-m          #+#    #+#             */
+/*   Updated: 2025/08/15 16:27:29 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/server.h"
 
-t_global	g_server;
-
-static int server_argc(int argc) 
+unsigned char	bin_to_char(int *bin)
 {
-	if (argc < 2)
-		return(TRUE);	
-	ft_putstr_fd("To many arguments", 2);
-	exit(EXIT_FAILURE);
-}
+	int	bit_index;
+	int	c;
 
-
-int main(int argc, char **argv)
-{
-	t_global	t_global;
-	//struct sigaction sa;
-	server_argc(argc);
-	init_server(t_global);
-	register_sig_handler();
+	c = 0;
+	bit_index = 0;
+	while (bit_index < 8)
+	{
+		if (bin[bit_index] == 1)
+			c = (c << 1) | 1;
+		else
+			c = (c << 1);
+		bit_index++;
+	}
+	return ((unsigned char) c);
 }

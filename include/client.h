@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:03:31 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/13 17:56:48 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/15 16:12:30 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,11 @@
 # include <unistd.h>
 # include <sys/time.h>
 
-
-# define KO_MESSAGE "Bad argv: \n ./client [PID_SERVER] [MESSAGE]"
-# define BAD_SIGNAL "Signal sending failed: Operation not permitted."
-
 # define CHAR_0 SIGUSR1
 # define CHAR_1 SIGUSR2
 
-# define TRUE 0
-# define FALSE 1
+# define TRUE 1
+# define FALSE 0
 
 typedef struct s_data
 {
