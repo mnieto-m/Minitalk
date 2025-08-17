@@ -6,13 +6,13 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:25:59 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/15 16:16:36 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/17 13:07:10 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/server.h"
 
-t_global	g_server;
+t_global	s_server;
 
 static int server_argc(int argc) 
 {
@@ -25,9 +25,13 @@ static int server_argc(int argc)
 
 int main(int argc, char **argv)
 {
-	t_global	t_global;
-	//struct sigaction sa;
+	struct sigaction sa;
+	
 	server_argc(argc);
-	init_server(t_global);
-	register_sig_handler();
+	sigemptyset(s_server.sigset);
+	sigaddset(&sigset, SIGUSR1);
+	sigaddset(&sigset, SIGUSR2);
+	sa.sa_flags = SA_SIGINFO;
+	//init_server();
+	//register_sig_handler();
 }
