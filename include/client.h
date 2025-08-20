@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:03:31 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/15 16:12:30 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/18 13:15:49 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef struct s_global
 	volatile sig_atomic_t	is_ready;
 }	t_global;
 
-extern t_global g_client;
+extern t_global glob_client;
 
 int check_argv(int argc);
 

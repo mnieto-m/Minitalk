@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:54:56 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/17 13:06:13 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/18 13:17:16 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ typedef struct s_global
 	char					char_value;
 	volatile sig_atomic_t	mesg_pos;
 	pid_t					pid_server;
-	sigset_t				*sigset;
 	t_mesg					mesg;
 }	t_global;
 
