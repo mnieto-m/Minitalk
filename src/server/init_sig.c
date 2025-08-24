@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   init_sig.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/16 17:25:59 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/24 13:16:45 by mnieto-m         ###   ########.fr       */
+/*   Created: 2025/08/22 23:02:18 by mnieto-m          #+#    #+#             */
+/*   Updated: 2025/08/24 12:47:34 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
-t_client_global	g_c;
-
-static int server_argc(int argc, char **argv) 
+void init_sig(void)
 {
-	if (argc < 2 || argv[0] != NULL)
-		return(TRUE);	
-	ft_putstr_fd("To many arguments", 2);
-	exit(EXIT_FAILURE);
-}
-
-int main(int argc, char **argv)
-{
-	ft_printf("Process PID: %d await for SIGUSR.\n", getpid());
-	memset(&g_c,0,sizeof(t_client_global));
-	server_argc(argc, argv);
-	init_sig();
-	while (1)
-		pause();
-	exit(0);
+	struct sigaction sa;
+	sigset_t	set;
+	
+	sigemptyset(&set);
+	sigaddset(&set, SIGUSR1);
+	sigaddset(&set, SIGUSR2);
+	sa.sa_flags = SA_SIGINFO | SA_RESTART;
+	sa.sa_sigaction = client_signal_handler;// entender esta parte del codigo niceeee!!!!!!!!!
+	sa.sa_mask	= set;
+	sigaction(SIGUSR1,&sa,NULL);
+	sigaction(SIGUSR2,&sa,NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:54:56 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/18 13:17:16 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/24 13:24:05 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <sys/time.h>
+# include "client.h"
+
 
 # define TRUE 1
 # define FALSE 0
+
 
 typedef struct s_msg
 {
@@ -31,7 +34,7 @@ typedef struct s_msg
 	char	*str;
 }	t_mesg;
 
-typedef struct s_global
+typedef struct s_server_global
 {
 	volatile sig_atomic_t	client_pid;
 	volatile sig_atomic_t	actual_pid;
@@ -41,8 +44,15 @@ typedef struct s_global
 	volatile sig_atomic_t	mesg_pos;
 	pid_t					pid_server;
 	t_mesg					mesg;
-}	t_global;
+}	t_server_global;
 
-extern t_global g_server;
+extern t_server_global g_server;
+
+void init_sig(void);
+void	client_signal_handler(int signum, siginfo_t *info, void *context);
+void	error_exit(char *error_msg);
+unsigned char	bin_to_char(int *bin);
+int	ft_pow(const int base, const int power);
+
 
 #endif

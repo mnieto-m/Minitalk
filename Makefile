@@ -6,7 +6,7 @@
 #    By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/16 17:51:14 by mnieto-m          #+#    #+#              #
-#    Updated: 2025/08/13 19:26:45 by mnieto-m         ###   ########.fr        #
+#    Updated: 2025/08/24 13:19:02 by mnieto-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,11 @@ OBJ_DIR_CLIENT = $(OBJ_DIR)client/
 INCLUDE_DIR = -Iinclude
 
 #Files
-FILES_SERVER = server
+FILES_SERVER = server\
+				init_sig\
+				handler\
+				bin_to_char\
+				error_server
 FILES_CLIENT = client\
 				check_argv
 
