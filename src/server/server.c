@@ -6,13 +6,13 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:25:59 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/24 13:16:45 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:30:15 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
-t_client_global	g_c;
+t_server_global	g_s;
 
 static int server_argc(int argc, char **argv) 
 {
@@ -25,7 +25,6 @@ static int server_argc(int argc, char **argv)
 int main(int argc, char **argv)
 {
 	ft_printf("Process PID: %d await for SIGUSR.\n", getpid());
-	memset(&g_c,0,sizeof(t_client_global));
 	server_argc(argc, argv);
 	init_sig();
 	while (1)

@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:54:56 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/24 13:24:05 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:26:50 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,20 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <sys/time.h>
-# include "client.h"
 
 
 # define TRUE 1
 # define FALSE 0
 
+typedef enum e_server_state
+{
+	IDLE = 0,
+	RCV_SIZE = 1,
+	RCV_MSG = 2
+}	t_server_state;
 
-typedef struct s_msg
+
+typedef struct s_mesg
 {
 	int		size_message;
 	char	*str;
@@ -36,6 +42,7 @@ typedef struct s_msg
 
 typedef struct s_server_global
 {
+	t_server_state			state;
 	volatile sig_atomic_t	client_pid;
 	volatile sig_atomic_t	actual_pid;
 	volatile sig_atomic_t	client_activity;
