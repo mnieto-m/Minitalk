@@ -6,7 +6,7 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:54:56 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/25 17:26:50 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/26 20:51:45 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 
 # define TRUE 1
 # define FALSE 0
+#define TIMEOUT 8
+#define SLEEP_TIME 500000
 
 typedef enum e_server_state
 {

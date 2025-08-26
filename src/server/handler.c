@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 17:30:36 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/25 17:30:37 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/26 20:52:09 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "server.h"
+#include "../../include/server.h"
 
 t_server_global g_server;
 
@@ -72,7 +72,7 @@ void	rcv_char(int signum)
 	if (bit == 8)
 	{
 		c = (char) bin_to_char(binary_char);
-		ft_strncat(g_server.mesg.str, &c, 1);
+		ft_strlcat(g_server.mesg.str, &c, 1);
 		bit = 0;
 		if (binary_char)
 			free(binary_char);

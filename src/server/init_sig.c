@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 23:02:18 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/24 12:47:34 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/26 20:45:22 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "server.h"
+#include "../../include/server.h"
 
 void init_sig(void)
 {

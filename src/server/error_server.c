@@ -6,11 +6,11 @@
 /*   By: mnieto-m <mnieto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 12:54:12 by mnieto-m          #+#    #+#             */
-/*   Updated: 2025/08/24 12:54:23 by mnieto-m         ###   ########.fr       */
+/*   Updated: 2025/08/26 20:45:36 by mnieto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "server.h"
+#include "../../include/server.h"
 
 void	error_exit(char *error_msg)
 {
